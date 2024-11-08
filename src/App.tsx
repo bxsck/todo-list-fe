@@ -18,7 +18,7 @@ const App = () => {
         }}
       >
         <Title level={2} style={{ color: "#A64D79" }}>
-          Todo List App
+          MY TODO LIST
         </Title>
       </Header>
       <Content

@@ -6,13 +6,13 @@ const Copyright: React.FC = () => {
     <div
       style={{
         textAlign: "center",
-        paddingTop: "20px",
-        background: "#f1f1f1",
+        padding: "20px 0px",
         borderTop: "1px solid #e8e8e8",
+        background: "#1A1A1D",
         width: "100%",
       }}
     >
-      <p style={{ margin: "0 0 10px 0" }}>
+      <p style={{ margin: "0 0 10px 0", color: "#A64D79" }}>
         &copy; {new Date().getFullYear()} Teerapat (Bosck) Surasin. All rights
         reserved.
       </p>
@@ -23,7 +23,7 @@ const Copyright: React.FC = () => {
           rel="noopener noreferrer"
           style={{ margin: "0 10px" }}
         >
-          <GithubOutlined style={{ fontSize: "24px", color: "black" }} />
+          <GithubOutlined style={{ fontSize: "24px", color: "#A64D79" }} />
         </a>
         <a
           href="https://www.linkedin.com/in/teerapat-srs"
@@ -31,7 +31,7 @@ const Copyright: React.FC = () => {
           rel="noopener noreferrer"
           style={{ margin: "0 10px" }}
         >
-          <LinkedinOutlined style={{ fontSize: "24px", color: "black" }} />
+          <LinkedinOutlined style={{ fontSize: "24px", color: "#A64D79" }} />
         </a>
       </p>
     </div>

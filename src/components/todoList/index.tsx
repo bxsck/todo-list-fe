@@ -96,10 +96,10 @@ const TodoList = () => {
   return (
     <Styles>
       <div className="page-container">
-        <Row>
-          <Col span={8}>
+        <Row gutter={[16, 16]}>
+          <Col xs={24} md={8}>
             <span className="todo-list-container">
-              <Title level={4}>Todo List</Title>
+              <Title level={3}>Todo List</Title>
               {todoList.map((item) => {
                 return (
                   <div key={item.name} id={item.name} className="todo-item">
@@ -115,9 +115,9 @@ const TodoList = () => {
               })}
             </span>
           </Col>
-          <Col span={8}>
+          <Col xs={24} md={8}>
             <span className="todo-list-container">
-              <Title level={4}>Fruits</Title>
+              <Title level={3}>Fruits</Title>
               {fruits.map((item) => {
                 return (
                   <div
@@ -139,9 +139,9 @@ const TodoList = () => {
               })}
             </span>
           </Col>
-          <Col span={8}>
+          <Col xs={24} md={8}>
             <span className="todo-list-container">
-              <Title level={4}>Vegetables</Title>
+              <Title level={3}>Vegetables</Title>
               {vegetables.map((item) => {
                 return (
                   <div
