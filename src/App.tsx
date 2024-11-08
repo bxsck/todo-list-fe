@@ -23,11 +23,8 @@ const App = () => {
       </Header>
       <Content
         style={{
-          maxWidth: 1280,
           width: "100%",
-          margin: "auto",
           flex: 1,
-          background: "#A64D79",
         }}
       >
         <TodoList />

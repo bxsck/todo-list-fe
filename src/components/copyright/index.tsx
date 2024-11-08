@@ -13,7 +13,8 @@ const Copyright: React.FC = () => {
       }}
     >
       <p style={{ margin: "0 0 10px 0" }}>
-        &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+        &copy; {new Date().getFullYear()} Teerapat (Bosck) Surasin. All rights
+        reserved.
       </p>
       <p style={{ margin: "0" }}>
         <a

@@ -95,70 +95,76 @@ const TodoList = () => {
 
   return (
     <Styles>
-      <Row>
-        <Col span={8}>
-          <span className="todo-list-container">
-            <Title level={4}>Todo List</Title>
-            {todoList.map((item) => {
-              return (
-                <div key={item.name} id={item.name} className="todo-item">
-                  <Button
-                    className="button-item"
-                    style={{ width: 200 }}
-                    onClick={() => handleClickTodoItem(item.name, item.type)}
+      <div className="page-container">
+        <Row>
+          <Col span={8}>
+            <span className="todo-list-container">
+              <Title level={4}>Todo List</Title>
+              {todoList.map((item) => {
+                return (
+                  <div key={item.name} id={item.name} className="todo-item">
+                    <Button
+                      className="button-item"
+                      style={{ width: 200 }}
+                      onClick={() => handleClickTodoItem(item.name, item.type)}
+                    >
+                      {item.name}
+                    </Button>
+                  </div>
+                );
+              })}
+            </span>
+          </Col>
+          <Col span={8}>
+            <span className="todo-list-container">
+              <Title level={4}>Fruits</Title>
+              {fruits.map((item) => {
+                return (
+                  <div
+                    key={item.name}
+                    id={item.name + "-fruit"}
+                    className="todo-item"
+                    style={{ opacity: 0 }}
                   >
-                    {item.name}
-                  </Button>
-                </div>
-              );
-            })}
-          </span>
-        </Col>
-        <Col span={8}>
-          <span className="todo-list-container">
-            <Title level={4}>Fruits</Title>
-            {fruits.map((item) => {
-              return (
-                <div
-                  key={item.name}
-                  id={item.name + "-fruit"}
-                  className="todo-item"
-                  style={{ opacity: 0 }}
-                >
-                  <Button
-                    style={{ width: 200 }}
-                    onClick={() => handleClickReturnItem(item.name, item.type)}
+                    <Button
+                      style={{ width: 200 }}
+                      onClick={() =>
+                        handleClickReturnItem(item.name, item.type)
+                      }
+                    >
+                      {item.name}
+                    </Button>
+                  </div>
+                );
+              })}
+            </span>
+          </Col>
+          <Col span={8}>
+            <span className="todo-list-container">
+              <Title level={4}>Vegetables</Title>
+              {vegetables.map((item) => {
+                return (
+                  <div
+                    key={item.name}
+                    id={item.name + "-vegetable"}
+                    className="todo-item"
+                    style={{ opacity: 0 }}
                   >
-                    {item.name}
-                  </Button>
-                </div>
-              );
-            })}
-          </span>
-        </Col>
-        <Col span={8}>
-          <span className="todo-list-container">
-            <Title level={4}>Vegetables</Title>
-            {vegetables.map((item) => {
-              return (
-                <div
-                  key={item.name}
-                  id={item.name + "-vegetable"}
-                  className="todo-item"
-                  style={{ opacity: 0 }}
-                >
-                  <Button
-                    style={{ width: 200 }}
-                    onClick={() => handleClickReturnItem(item.name, item.type)}
-                  >
-                    {item.name}
-                  </Button>
-                </div>
-              );
-            })}
-          </span>
-        </Col>
-      </Row>
+                    <Button
+                      style={{ width: 200 }}
+                      onClick={() =>
+                        handleClickReturnItem(item.name, item.type)
+                      }
+                    >
+                      {item.name}
+                    </Button>
+                  </div>
+                );
+              })}
+            </span>
+          </Col>
+        </Row>
+      </div>
     </Styles>
   );
 };
