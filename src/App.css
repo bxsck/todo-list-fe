@@ -1,3 +1,14 @@
 #root {
   min-height: 100vh;
 }
+
+.App {
+  text-align: center;
+}
+
+.header, .footer {
+  background-color: #34495e;
+  color: #ecf0f1;
+  padding: 1rem;
+  text-align: center;
+}

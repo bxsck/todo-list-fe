@@ -1,38 +1,57 @@
-import "./App.css";
-import Copyright from "./components/copyright";
+import React from "react";
+import { Typography } from "antd";
 import TodoList from "./components/todoList";
-import { Layout, Typography } from "antd";
+import {
+  LinkedinOutlined,
+  GithubOutlined,
+  GlobalOutlined,
+} from "@ant-design/icons";
 
-const { Footer, Content, Header } = Layout;
+import "./App.css";
+
 const { Title } = Typography;
+
 const App = () => {
   return (
-    <Layout style={{ minHeight: "100vh" }}>
-      <Header
-        style={{
-          textAlign: "center",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "#1A1A1D",
-        }}
-      >
-        <Title level={2} style={{ color: "#A64D79" }}>
-          MY TODO LIST
+    <div className="App">
+      <header className="header">
+        <Title level={2} style={{ color: "white" }}>
+          Simple Todo{" "}
         </Title>
-      </Header>
-      <Content
-        style={{
-          width: "100%",
-          flex: 1,
-        }}
-      >
+      </header>
+      <main>
         <TodoList />
-      </Content>
-      <Footer style={{ textAlign: "center", padding: 0 }}>
-        <Copyright />
-      </Footer>
-    </Layout>
+      </main>
+      <footer className="footer">
+        <p>&copy; 2024 Teerapat (Bosck) Surasin. All rights reserved.</p>
+        <p style={{ margin: "0" }}>
+          <a
+            href="https://github.com/bxsck"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ margin: "0 10px" }}
+          >
+            <GithubOutlined style={{ fontSize: "24px" }} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/teerapat-srs"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ margin: "0 10px" }}
+          >
+            <LinkedinOutlined style={{ fontSize: "24px" }} />
+          </a>
+          <a
+            href="https://bosckts.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ margin: "0 10px" }}
+          >
+            <GlobalOutlined style={{ fontSize: "24px" }} />
+          </a>
+        </p>
+      </footer>
+    </div>
   );
 };
 

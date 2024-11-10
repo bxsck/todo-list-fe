@@ -1,5 +1,6 @@
 import { Col, Row, Button, Typography } from "antd";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { todoListItems } from "../../data";
 import Styles from "./styles";
 const { Title } = Typography;
@@ -99,10 +100,19 @@ const TodoList = () => {
         <Row gutter={[16, 16]}>
           <Col xs={24} md={8}>
             <span className="todo-list-container">
-              <Title level={3}>Todo List</Title>
+              <Title level={3} style={{ color: "white" }}>
+                Todo List
+              </Title>
               {todoList.map((item) => {
                 return (
-                  <div key={item.name} id={item.name} className="todo-item">
+                  <motion.div
+                    key={item.name}
+                    id={item.name}
+                    className="todo-item"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                  >
                     <Button
                       className="button-item"
                       style={{ width: 200 }}
@@ -110,55 +120,65 @@ const TodoList = () => {
                     >
                       {item.name}
                     </Button>
-                  </div>
+                  </motion.div>
                 );
               })}
             </span>
           </Col>
-          <Col xs={24} md={8}>
+          <Col xs={24} md={8} className="fruits-column">
             <span className="todo-list-container">
-              <Title level={3}>Fruits</Title>
+              <Title level={3} style={{ color: "white" }}>
+                Fruits
+              </Title>
               {fruits.map((item) => {
                 return (
-                  <div
+                  <motion.div
                     key={item.name}
                     id={item.name + "-fruit"}
                     className="todo-item"
-                    style={{ opacity: 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
                   >
                     <Button
                       style={{ width: 200 }}
+                      className="button-item"
                       onClick={() =>
                         handleClickReturnItem(item.name, item.type)
                       }
                     >
                       {item.name}
                     </Button>
-                  </div>
+                  </motion.div>
                 );
               })}
             </span>
           </Col>
-          <Col xs={24} md={8}>
+          <Col xs={24} md={8} className="vegetables-column">
             <span className="todo-list-container">
-              <Title level={3}>Vegetables</Title>
+              <Title level={3} style={{ color: "white" }}>
+                Vegetables
+              </Title>
               {vegetables.map((item) => {
                 return (
-                  <div
+                  <motion.div
                     key={item.name}
                     id={item.name + "-vegetable"}
                     className="todo-item"
-                    style={{ opacity: 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
                   >
                     <Button
                       style={{ width: 200 }}
+                      className="button-item"
                       onClick={() =>
                         handleClickReturnItem(item.name, item.type)
                       }
                     >
                       {item.name}
                     </Button>
-                  </div>
+                  </motion.div>
                 );
               })}
             </span>

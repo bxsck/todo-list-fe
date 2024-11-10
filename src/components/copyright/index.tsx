@@ -1,5 +1,4 @@
 import React from "react";
-import { LinkedinOutlined, GithubOutlined } from "@ant-design/icons";
 
 const Copyright: React.FC = () => {
   return (
