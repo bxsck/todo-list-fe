@@ -6,13 +6,6 @@ const todoListStyled = styled.div`
   min-height: calc(100vh - 162.5px);
   overflow-y: auto;
 
-  .header, .footer {
-    background-color: #34495e;
-    color: #ecf0f1;
-    padding: 1rem;
-    text-align: center;
-  }
-
   .page-container {
     max-width: 1280px;
     margin: 0 auto;

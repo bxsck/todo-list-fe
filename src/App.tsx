@@ -1,4 +1,3 @@
-import React from "react";
 import { Typography } from "antd";
 import TodoList from "./components/todoList";
 import {
@@ -16,7 +15,7 @@ const App = () => {
     <div className="App">
       <header className="header">
         <Title level={2} style={{ color: "white" }}>
-          Simple Todo{" "}
+          Simple Todo
         </Title>
       </header>
       <main>
